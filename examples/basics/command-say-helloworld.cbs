@@ -1,0 +1,25 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+	<block type="twitch_oncommand" id="}thwMjI$9?sX4Mz#/HsJ" x="10" y="-90">
+		<comment pinned="false" h="77.06700134277344" w="211.82376098632812">
+			Respond in chat to a command `!helloworld`
+		</comment>
+		<value name="NAME">
+			<block type="text" id="!9*uI_+E2.8JtZr8|,P[">
+				<field name="TEXT">
+					helloworld
+				</field>
+			</block>
+		</value>
+		<statement name="INPUT">
+			<block type="twitch_say" id=":PI(v-}WTUsv!g5A/]mw">
+				<value name="VALUE">
+					<block type="text" id="894^5e*`0jh_`ZC9@D@7">
+						<field name="TEXT">
+							Hello World
+						</field>
+					</block>
+				</value>
+			</block>
+		</statement>
+	</block>
+</xml>
