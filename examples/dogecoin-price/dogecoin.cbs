@@ -1,0 +1,77 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+    <block type="twitch_oncommand" id="66Q_vZy`)zahoi}*sfpL" x="150" y="-230">
+        <value name="NAME">
+            <block type="text" id="NKm4Sap3buM/G+$1swsA">
+                <field name="TEXT">doge</field>
+            </block>
+        </value>
+        <statement name="INPUT">
+            <block type="twitch_say" id="MOm^qJo_q-Gc2k]n!-r`">
+                <value name="VALUE">
+                    <block type="text_join" id="P|Ye`kPZ!eB1AR^c$Mx0">
+                        <mutation items="3"/>
+                        <value name="ADD0">
+                            <block type="text" id="3Xd)t*I[Q9V)pPB6u46T">
+                                <field name="TEXT">The current price of DOGE/USD is $</field>
+                            </block>
+                        </value>
+                        <value name="ADD1">
+                            <block type="json_getkey" id="yf)5dD{op4RdrC?8phAR">
+                                <value name="KEY">
+                                    <block type="text" id="lV[YNdCK,S:1wWcE))}1">
+                                        <field name="TEXT">price</field>
+                                    </block>
+                                </value>
+                                <value name="JSON">
+                                    <block type="json_getkey" id="m$M:@Xneqgi.!@8QRCe|">
+                                        <value name="KEY">
+                                            <block type="text" id="FxAKho[WDKlI{FpuLq@1">
+                                                <field name="TEXT">0</field>
+                                            </block>
+                                        </value>
+                                        <value name="JSON">
+                                            <block type="json_getkey" id="Wy}W:kL@+_E]hUng:21(">
+                                                <value name="KEY">
+                                                    <block type="text" id="#H+cb!e93=)U{WS:Eq7?">
+                                                        <field name="TEXT">prices</field>
+                                                    </block>
+                                                </value>
+                                                <value name="JSON">
+                                                    <block type="json_getkey" id="gj[8b?na;tl:$z0cW(Cs">
+                                                        <value name="KEY">
+                                                            <block type="text" id="WG+bxE_WSu9sTvtT?ii-">
+                                                                <field name="TEXT">data</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="JSON">
+                                                            <block type="json_parse" id="l*7R9^lqn_Z^e#3E!1if">
+                                                                <value name="PARSE">
+                                                                    <block type="utility_get_http" id="qLbx[xQy5f9/~eRv28.?">
+                                                                        <value name="URL">
+                                                                            <block type="text" id="#AsKJ5uOGC4Z:,T9uBcW">
+                                                                                <field name="TEXT">https://sochain.com/api/v2/get_price/DOGE/USD</field>
+                                                                            </block>
+                                                                        </value>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </value>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </value>
+                            </block>
+                        </value>
+                        <value name="ADD2">
+                            <block type="text" id="AWv9W^NQd@T9g+W4r=Bh">
+                                <field name="TEXT"> per 1 DOGE</field>
+                            </block>
+                        </value>
+                    </block>
+                </value>
+            </block>
+        </statement>
+    </block>
+</xml>
