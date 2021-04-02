@@ -1,0 +1,84 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+	<block type="twitch_oncommand" id="DtDcCZ$`fT9)WcwT$E?J" x="150" y="-110">
+		<comment pinned="false" h="102.3125" w="411.296875">
+			Returns a message with a randomly chosen text value
+		</comment>
+		<value name="NAME">
+			<block type="text" id="M8c:/`sRL2V#z2lmFCnT">
+				<field name="TEXT">
+					hungry
+				</field>
+			</block>
+		</value>
+		<statement name="INPUT">
+			<block type="twitch_say" id=",@;.~^`aW1uRmc8(vk{^">
+				<value name="VALUE">
+					<block type="text_join" id="6Gb/?n89@`a6-S+CV?!:">
+						<mutation items="4" />
+						<value name="ADD0">
+							<block type="text" id="g-t3{_-8pgD-n{$f126z">
+								<field name="TEXT">
+									Here's
+								</field>
+							</block>
+						</value>
+						<value name="ADD1">
+							<block type="lists_getIndex" id="Be?tf:ZGwx7IIi==2](w">
+								<mutation statement="false" at="false" />
+								<field name="MODE">
+									GET
+								</field>
+								<field name="WHERE">
+									RANDOM
+								</field>
+								<value name="VALUE">
+									<block type="lists_create_with" id="JuW^6`;W7[)L6QJ5YUY*">
+										<mutation items="4" />
+										<value name="ADD0">
+											<block type="text" id=",hsl!iUw!ayEgTWuKCJ?">
+												<field name="TEXT">
+													a sandwich
+												</field>
+											</block>
+										</value>
+										<value name="ADD1">
+											<block type="text" id="0F?2k*{.9;K/x-FrX*.*">
+												<field name="TEXT">
+													an apple
+												</field>
+											</block>
+										</value>
+										<value name="ADD2">
+											<block type="text" id="cXfo]Y{:*heNhD7gZ/+M">
+												<field name="TEXT">
+													some grapes
+												</field>
+											</block>
+										</value>
+										<value name="ADD3">
+											<block type="text" id="Muxk/w8|?jg3JfndIkFz">
+												<field name="TEXT">
+													a pack of gum
+												</field>
+											</block>
+										</value>
+									</block>
+								</value>
+							</block>
+						</value>
+						<value name="ADD2">
+							<block type="text" id="i=lwh#:TJl3!^|8Fe,A~">
+								<field name="TEXT">
+									for you
+								</field>
+							</block>
+						</value>
+						<value name="ADD3">
+							<block type="twitch_user" id="FP~YVuq*-r%E]sRIl@C-" />
+						</value>
+					</block>
+				</value>
+			</block>
+		</statement>
+	</block>
+</xml>

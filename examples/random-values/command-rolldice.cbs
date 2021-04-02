@@ -1,0 +1,78 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+	<block type="twitch_oncommand" id="1,QDz1kN1mxWx_2:$sf=" x="-70" y="-50">
+		<comment pinned="false" h="102.078125" w="467.6171875">
+			Responds with a random number between 1 and the number given in the chat message
+		</comment>
+		<value name="NAME">
+			<block type="text" id="Y7WUYAmHM37]M~4Xf`_-">
+				<field name="TEXT">
+					rolldice
+				</field>
+			</block>
+		</value>
+		<statement name="INPUT">
+			<block type="controls_if" id="?4-elynby*U6xAH1zFM=">
+				<value name="IF0">
+					<block type="logic_compare" id="[7p|:eQNz)IIC1fKWk/0">
+						<field name="OP">
+							GT
+						</field>
+						<value name="A">
+							<block type="math_parseFromText" id="pe1mi:#8[wS.)_lvJla|">
+								<value name="EXPRESSION">
+									<block type="twitch_message" id="9am`Lz#p:X=/-@5TL(k(" />
+								</value>
+							</block>
+						</value>
+						<value name="B">
+							<block type="math_number" id="7KQ8pLCp[o5)/AMtbpTU">
+								<field name="NUM">
+									0
+								</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<statement name="DO0">
+					<block type="twitch_reply" id="_Vxhor85/[/f~:PF@=4Q">
+						<value name="MESSAGE">
+							<block type="text_join" id="U9+lv2o48[qQy![|eePd">
+								<mutation items="2" />
+								<value name="ADD0">
+									<block type="text" id="Y4qP0n9E_M(OWG/nlxg4">
+										<field name="TEXT">
+											rolled a
+										</field>
+									</block>
+								</value>
+								<value name="ADD1">
+									<block type="math_random_int" id="!0)tZvyv^pnT%${lb*]C">
+										<value name="FROM">
+											<shadow type="math_number" id="is`iO]@YxMwM8X/J;6MT">
+												<field name="NUM">
+													1
+												</field>
+											</shadow>
+										</value>
+										<value name="TO">
+											<shadow type="math_number" id="18^Q4d=Sz6{/y7pYw8:t">
+												<field name="NUM">
+													100
+												</field>
+											</shadow>
+											<block type="math_parseFromText" id="g+R8BdeSBh[hNUwrrz%F">
+												<value name="EXPRESSION">
+													<block type="twitch_message" id="_;_ZOo8aI)s!3m;i9;{Y" />
+												</value>
+											</block>
+										</value>
+									</block>
+								</value>
+							</block>
+						</value>
+					</block>
+				</statement>
+			</block>
+		</statement>
+	</block>
+</xml>

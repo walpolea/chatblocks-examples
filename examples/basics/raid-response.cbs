@@ -1,0 +1,36 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+	<block type="twitch_onraid" id="uuoCAQ/$*/nJj?[_:(*?" x="70" y="-70">
+		<comment pinned="false" h="105.56932067871094" w="451.43487548828125">
+			Respond in chat to an incoming raid.
+		</comment>
+		<statement name="INPUT">
+			<block type="twitch_say" id="j7|}pvro1ywM+q$^tY{,">
+				<value name="VALUE">
+					<block type="text_join" id="=Jt,D=Wol{7zUbY^1mA*">
+						<mutation items="4" />
+						<value name="ADD0">
+							<block type="twitch_user" id="Mv1%wZ,lpo!/Rhmy[tLz" />
+						</value>
+						<value name="ADD1">
+							<block type="text" id="0FJh(VN/#%EjE:nRWGv-">
+								<field name="TEXT">
+									is raiding with a party of
+								</field>
+							</block>
+						</value>
+						<value name="ADD2">
+							<block type="twitch_viewer_count" id="g4rf_9Pv.pGBb@kuSR(6" />
+						</value>
+						<value name="ADD3">
+							<block type="text" id="upG.(`eKYtRxx1@8vgX`">
+								<field name="TEXT">
+									amazing people!
+								</field>
+							</block>
+						</value>
+					</block>
+				</value>
+			</block>
+		</statement>
+	</block>
+</xml>
