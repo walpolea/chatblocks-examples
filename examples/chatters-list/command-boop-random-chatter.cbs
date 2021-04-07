@@ -1,0 +1,44 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+	<block type="twitch_oncommand" id="Wm3/_Q5BIjsk#J39q3w," x="530" y="490">
+		<value name="NAME">
+			<block type="text" id=",h9A1$uYuB}]+wnP^7[N">
+				<field name="TEXT">
+					boop
+				</field>
+			</block>
+		</value>
+		<statement name="INPUT">
+			<block type="twitch_say" id="^Fif#:G`y`/DR.-.{nIa">
+				<value name="VALUE">
+					<block type="text_join" id="!Wd7w~Cn5v`Je(Bi,Lng">
+						<mutation items="3" />
+						<value name="ADD0">
+							<block type="twitch_user" id="/C=za3zWKdxZbV{Q.WUj" />
+						</value>
+						<value name="ADD1">
+							<block type="text" id="=+.OYK2lXk}SBjT1hYl8">
+								<field name="TEXT">
+									boops
+								</field>
+							</block>
+						</value>
+						<value name="ADD2">
+							<block type="lists_getIndex" id="^,$QVq9RMk}!;(^!tca9">
+								<mutation statement="false" at="false" />
+								<field name="MODE">
+									GET
+								</field>
+								<field name="WHERE">
+									RANDOM
+								</field>
+								<value name="VALUE">
+									<block type="twitch_channel_chatters" id="?jmV7uZ.;yU:anj.]9NA" />
+								</value>
+							</block>
+						</value>
+					</block>
+				</value>
+			</block>
+		</statement>
+	</block>
+</xml>
