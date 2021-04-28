@@ -1,0 +1,3 @@
+[submodule "examples/chatblocks-counter"]
+	path = examples/chatblocks-counter
+	url = https://github.com/ellenary/chatblocks-counter.git
