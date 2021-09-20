@@ -1,99 +1,17 @@
-<xml xmlns="https://developers.google.com/blockly/xml">
-	<variables>
-		<variable id="xc)xO{/lXcYxD;~^-;@J">
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="xc)xO{/lXcYxD;~^-;@J">
 			cbe_cooldown_timestamp
-		</variable>
-	</variables>
-	<block type="twitch_onconnected" id="GBEHHFrs4)vC4}.hp/)w" x="-850" y="-830">
-		<comment pinned="false" h="115.9242172241211" w="427.8969421386719">
+		</variable></variables><block type="twitch_onconnected" id="GBEHHFrs4)vC4}.hp/)w" x="-850" y="-830"><comment pinned="false" h="115" w="427">
 			We need to give the cooldown variable a value so the command can run the first time without errors
-		</comment>
-		<statement name="INPUT">
-			<block type="variables_set" id="v4lJhF%s1b@XB`_C$@l1">
-				<field name="VAR" id="xc)xO{/lXcYxD;~^-;@J">
-					cbe_cooldown_timestamp
-				</field>
-				<value name="VALUE">
-					<block type="math_number" id="{rb=$J)mhbcZla^kVlvi">
-						<field name="NUM">
-							0
-						</field>
-					</block>
-				</value>
-			</block>
-		</statement>
-	</block>
-	<block type="twitch_oncommand" id="MAK}~?rf;Lp0u6)*Yk^l" x="-850" y="-730">
-		<comment pinned="false" h="104.14633178710938" w="435.1051025390625">
+		</comment><statement name="INPUT"><block type="variables_set" id="v4lJhF%s1b@XB`_C$@l1"><field name="VAR" id="xc)xO{/lXcYxD;~^-;@J">
+			cbe_cooldown_timestamp
+		</field><value name="VALUE"><block type="math_number" id="{rb=$J)mhbcZla^kVlvi"><field name="NUM">0</field></block></value></block></statement></block><block type="twitch_oncommand" id="MAK}~?rf;Lp0u6)*Yk^l" x="-850" y="-730"><comment pinned="false" h="104" w="435">
 			sets/checks a variable to make sure a command can only run every 10 seconds.
-		</comment>
-		<value name="NAME">
-			<block type="text" id="Bn@F(r#}johW(JnY_NNn">
-				<field name="TEXT">
-					cooldown
-				</field>
-			</block>
-		</value>
-		<statement name="INPUT">
-			<block type="controls_if" id="PB.iQ)X~i7?s!zMA(t5)">
-				<value name="IF0">
-					<block type="logic_compare" id="Vn2V4f6]8H^}XS$09r~y">
-						<field name="OP">
-							GT
-						</field>
-						<value name="A">
-							<block type="time_current_unix" id="oP1sK^4L`9!1O;uYIvZT" />
-						</value>
-						<value name="B">
-							<block type="math_arithmetic" id="svCV|(-yD?TR:f5Sw;WU">
-								<field name="OP">
-									ADD
-								</field>
-								<value name="A">
-									<shadow type="math_number">
-										<field name="NUM">
+		</comment><value name="NAME"><block type="text" id="Bn@F(r#}johW(JnY_NNn"><field name="TEXT">cooldown</field></block></value><statement name="INPUT"><block type="controls_if" id="PB.iQ)X~i7?s!zMA(t5)"><value name="IF0"><block type="logic_compare" id="Vn2V4f6]8H^}XS$09r~y"><field name="OP">GT</field><value name="A"><block type="time_current_unix" id="oP1sK^4L`9!1O;uYIvZT"/></value><value name="B"><block type="math_arithmetic" id="svCV|(-yD?TR:f5Sw;WU"><field name="OP">ADD</field><value name="A"><shadow type="math_number"><field name="NUM">
 											1
-										</field>
-									</shadow>
-									<block type="variables_get" id="GHBhIDS#)RQmVw`Us+;~">
-										<field name="VAR" id="xc)xO{/lXcYxD;~^-;@J">
-											cbe_cooldown_timestamp
-										</field>
-									</block>
-								</value>
-								<value name="B">
-									<shadow type="math_number" id="c|5q|C14VRvB;.)^F|).">
-										<field name="NUM">
-											10000
-										</field>
-									</shadow>
-								</value>
-							</block>
-						</value>
-					</block>
-				</value>
-				<statement name="DO0">
-					<block type="variables_set" id="S4|KcT2[ZP$aWy/S17kE">
-						<field name="VAR" id="xc)xO{/lXcYxD;~^-;@J">
-							cbe_cooldown_timestamp
-						</field>
-						<value name="VALUE">
-							<block type="time_current_unix" id="]Ae6*:{{(}a`zD}_|:@c" />
-						</value>
-						<next>
-							<block type="twitch_say" id="@l.;?zdq~C/j!j8*^O9s">
-								<value name="VALUE">
-									<block type="text" id="i((5jxk?(cdMfmuv4Q!I">
-										<field name="TEXT">
+										</field></shadow><block type="variables_get" id="GHBhIDS#)RQmVw`Us+;~"><field name="VAR" id="xc)xO{/lXcYxD;~^-;@J">
+			cbe_cooldown_timestamp
+		</field></block></value><value name="B"><shadow type="math_number" id="c|5q|C14VRvB;.)^F|)."><field name="NUM">10000</field></shadow></value></block></value></block></value><statement name="DO0"><block type="variables_set" id="S4|KcT2[ZP$aWy/S17kE"><field name="VAR" id="xc)xO{/lXcYxD;~^-;@J">
+			cbe_cooldown_timestamp
+		</field><value name="VALUE"><block type="time_current_unix" id="]Ae6*:{{(}a`zD}_|:@c"/></value><next><block type="twitch_say" id="@l.;?zdq~C/j!j8*^O9s"><value name="VALUE"><block type="text" id="i((5jxk?(cdMfmuv4Q!I"><field name="TEXT">
 											thanks for being patient
-										</field>
-									</block>
-								</value>
-							</block>
-						</next>
-					</block>
-				</statement>
-			</block>
-		</statement>
-	</block>
-</xml>
+										</field></block></value></block></next></block></statement></block></statement></block></xml>
